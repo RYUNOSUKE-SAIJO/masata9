@@ -1,0 +1,123 @@
+@use "global" as *;
+
+.service {
+    background-color: #F7F7F7;
+}
+
+.service-layout {
+    margin-top: myrem(100);
+}
+
+.service__inner {
+    padding-top: myrem(100);
+    padding-bottom: myrem(100);
+}
+
+.service__inner.inner {
+    @include mq('md') {
+        max-width: myrem(850);
+    }
+}
+
+.service__section-title {
+    @include mq('md') {
+        text-align: center;
+    }
+}
+
+.service__container {
+    margin-top: myrem(40);
+    @include mq('md') {
+        margin-top: myrem(50);
+    }
+}
+
+.service__items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1,myrem(345));
+    grid-template-rows: repeat(4,myrem(345));
+    @include mq('md') {
+        grid-template-columns: repeat(2,myrem(400));
+        grid-template-rows: repeat(2,myrem(400));
+    }
+
+}
+
+.service__item:nth-of-type(2) {
+    @include mq("md") {
+        grid-row: 1 / 2;
+    }
+}
+
+.service__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service__item.service__item--red {
+    background-color: #F14E53;
+    outline: myrem(2) solid $white;
+    outline-offset: myrem(-6);
+    @include mq('md') {
+        outline-offset: myrem(-7);
+    }
+}
+
+.service__item.service__item--blue {
+    background-color: #20AAA5;
+    outline: myrem(2) solid $white;
+    outline-offset: myrem(-6);
+    @include mq('md') {
+        outline-offset: myrem(-7);
+    }
+}
+
+
+.service__item-heading {
+    text-align: center;
+    color: #FFF;
+    font-family: Noto Sans JP;
+    font-size: myrem(20);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.05em;
+    @include mq('md') {
+        font-size: myrem(24);
+    }
+}
+
+.service__item-text {
+    width: myrem(220);
+    margin-top: myrem(30);
+    color: #FFF;
+    font-family: Noto Sans JP;
+    font-size: myrem(14);
+    font-style: normal;
+    font-weight: 500;
+    line-height: calc(30 / 14);
+    letter-spacing: 0.05em;
+    @include mq('md') {
+        width: myrem(293);
+        margin-top: myrem(25);
+        font-size: myrem(15);
+        line-height: calc(28 / 15); /* 186.667% */
+    }
+}
+
+.service__item-img {
+
+}
+
+.service__item-img img {
+    aspect-ratio: 345 / 345;
+    object-fit: cover;
+    width: 100%;
+    @include mq('md') {
+        aspect-ratio: 400 / 400;
+    }
+}
+

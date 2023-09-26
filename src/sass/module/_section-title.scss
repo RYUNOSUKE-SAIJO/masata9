@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.section-title__main {
+    color: #141414;
+    font-family: Roboto;
+    font-size: myrem(36);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+}
+
+.section-title__sub {
+    color: #F14E53;
+    font-family: Noto Sans JP;
+    font-size: myrem(10);
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.05em;
+    @include mq('md') {
+        font-size: myrem(12);
+    }
+}
+

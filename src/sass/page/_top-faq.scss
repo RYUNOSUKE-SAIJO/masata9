@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.faq {
+    background-color: #F7F7F7;
+}
+
+.faq-layout {
+    margin-top: myrem(100);
+}
+
+.faq__inner {
+    padding-top: myrem(100);
+}
+
+.faq__section-title {
+    @include mq('md') {
+        text-align: center;
+    }
+}
+
+.faq__accordion {
+    width: 100%;
+    max-width: myrem(800);
+    margin: myrem(50) auto 0;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion__item {
+
+
+}
+
+.accordion__item:not(:first-child) {
+    margin-top: myrem(10);
+}
+
+.accordion__title {
+    position: relative;
+    margin: 0 auto;
+    padding-right: myrem(40);
+    background-color: #155B98;
+    padding: myrem(20) myrem(12) myrem(20) myrem(10);
+    cursor: pointer;
+    @include mq('md') {
+        padding: myrem(20);
+    }
+}
+
+.accordion__title::before,
+.accordion__title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: myrem(12);
+    width: myrem(16);
+    height: myrem(2);
+    background-color: $white;
+    transition: 0.8s transform, 0.3s opacity;
+    @include mq('md') {
+        right: myrem(20);
+        width: myrem(20);
+        height: myrem(2);
+    }
+}
+
+.accordion__title::after {
+    transform: rotate(90deg);
+}
+
+.accordion__title.is-open::after {
+    opacity: 0;
+    transition: 0.5s transform, 0.7s opacity;
+}
+
+.accordion__title-text {
+    color: $white;
+}
+
+.accordion__content {
+    margin: 0 auto;
+    padding: myrem(20);
+    display: none;
+}
+
+.accordion__content-text {
+    color: #141414;
+}
+
+.faq-img {
+    margin-top: myrem(100);
+}

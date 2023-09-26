@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: myrem(30);
+    justify-items: center;
+    @include mq(md){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.news-cards__item {
+    display: inline-block;
+    max-width: myrem(320);
+    background-color: #FFF;
+    box-shadow: 2px 2px 4px 0px rgba(134, 134, 134, 0.16);
+}
+
+.news-cards__item:hover {
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.news-cards__item-body {
+    padding: myrem(16);
+}
+
+.news-cards__item-img {
+    aspect-ratio: 320 / 200;
+    width: 100%;
+    object-fit: cover;
+}
+
+.news-cards__item-date {
+    color: #868686;
+    font-family: Noto Sans JP;
+    font-size: myrem(12);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.05em;
+    @include mq('md') {
+        font-weight: 700;
+    }
+}
+
+.news-cards__item-text {
+    margin-top: myrem(12);
+    color: #141414;
+    font-family: Noto Sans JP;
+    font-size: myrem(14);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.85;
+    @include mq('md') {
+        font-weight: 700;
+    }
+}
+

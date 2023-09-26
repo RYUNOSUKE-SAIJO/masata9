@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.btn-layout.btn-layout--center  {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: myrem(15) myrem(97);
+    background-color: #F14E53;
+    box-shadow: (2px 2px 4px rgba(134, 134, 134, 0.50));
+    color: #FFF;
+    font-family: $main-font;
+    font-size: myrem(20);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.btn:hover {
+    box-shadow: none;
+    background-color: #BC353A;
+}
+
+

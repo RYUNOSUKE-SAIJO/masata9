@@ -1,0 +1,21 @@
+@use "global" as *;
+
+footer {
+    margin-top: myrem(100);
+    height: myrem(60);
+    background-color: #202F43;
+    padding: myrem(22);
+    @include mq('md') {
+        height: myrem(80);
+        padding: myrem(32);
+    }
+}
+
+.footer__copy-right {
+    display: block;
+    text-align: center;
+    font-family: Roboto;
+    color: #F7F7EE;
+    font-size: myrem(14);
+    font-weight: 400;
+}

@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.news {
+
+}
+
+.news-layout {
+    margin-top: myrem(100);
+}
+
+.news__inner {
+
+}
+
+.news__section-title {
+    @include mq('md') {
+        text-align: center;
+    }
+}
+
+.news__cards {
+    margin-top: myrem(40);
+    @include mq('md') {
+        margin-top: myrem(50);
+    }
+}
